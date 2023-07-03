@@ -39,6 +39,16 @@
             };   
             jsPost("https://ykt.dywz.cn/AccountManage/DoBatchEdtiAccMoney", params);
         }
+		
+		// 查看余额
+		function QueryBalance() {
+            // 获取输入框信息
+            var Element1 = document.getElementById("AccountId");
+            var AccountId = Element1.value;
+			
+			// 切换页面
+			window.location = "https://ykt.dywz.cn/scripts/DoEditPublic.aspx?AccountID=" + AccountId;
+		}
     </script>
     <div class="form">
         <form action="">
@@ -52,6 +62,7 @@
                 <input type="email" placeholder="请输入充值金额" id="TopUpMoney">
             </div>
             <span class="btn" onclick=StartToTopUp()>充值</span>
+			<span class="btn" onclick=QueryBalance()>查看余额</span>
         </form>
     </div>
     <style>
